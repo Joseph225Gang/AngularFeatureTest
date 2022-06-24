@@ -1,0 +1,18 @@
+<form #from = "ngForm" (submit)="OnSubmit()">
+    <div>
+        帳號: <input type="text" name="id" ngModel minlength="8" email/>
+    </div>
+    <div>
+        密碼: <input type="password" name="password" ngModel/>
+    </div>
+    <div>
+        <ng-container ngModelGroup="user">
+            姓名: <input type="text" name="name" ngModel/>
+            Email:<input type="text" name="email" ngModel/>
+        </ng-container>
+    </div>
+    <div>
+        <button type="reset">重設</button>
+        <button type="submit">登入</button>
+    </div>
+</form>
